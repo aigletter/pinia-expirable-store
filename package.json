@@ -1,0 +1,35 @@
+{
+  "name": "pinia-expirable-store",
+  "version": "1.0.0",
+  "description": "A Pinia store plugin for key-value storage with TTL (time-to-live) support.",
+  "author": {
+    "name": "Yurii Orlyk",
+    "email": "aigletter@gmail.com"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "pinia": "^3.0.0",
+    "pinia-plugin-persistedstate": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "@types/node": "^24.3.1"
+  }
+}
