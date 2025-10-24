@@ -2,8 +2,9 @@ import {defineStore, StoreDefinition} from "pinia";
 import {reactive} from "vue";
 import {StoreOption} from "./types/StoreOption";
 import {StoreRecord} from "./types/StoreRecord";
+import {ExpirableStore} from "./types/ExpirableStore";
 
-export default function defineExpirableStore(name: string, options: StoreOption = {}): StoreDefinition {
+export default function defineExpirableStore(name: string, options: StoreOption = {}): StoreDefinition<string, {}, {}, ExpirableStore> {
     return defineStore(name, () => {
         const _storage = reactive<Record<string, StoreRecord>>({});
 
